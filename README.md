@@ -1,4 +1,6 @@
-<img src="https://user-images.githubusercontent.com/58925056/156932862-f73ad5b4-3b32-4c01-916f-0d4c843dc343.png" width=700px height=350px>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/58925056/156936674-9e614227-748f-4079-a1b2-e69e78c32c56.png">
+</p>
 
 # Spring Security
 
