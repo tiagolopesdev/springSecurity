@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/58925056/156936674-9e614227-748f-4079-a1b2-e69e78c32c56.png">
+  <img src="https://user-images.githubusercontent.com/58925056/157106965-b9748e57-ede6-44de-8971-5e1ba867981b.svg" width=600>
 </p>
 
 # Spring Security
