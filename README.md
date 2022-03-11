@@ -29,9 +29,7 @@ O Spring possui algumas configurações para definir os usuários na sua camada 
 
 
 #  👨🏻‍💻Autor
-<a href="https://github.com/tiagolopesdev">
   <img src="https://user-images.githubusercontent.com/58925056/157934762-1b63b01a-92c4-4a5a-8cf3-1787c894c565.png" width=175px>
-</a>
 
 ### 📲Meus contatos
 
