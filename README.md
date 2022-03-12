@@ -17,16 +17,22 @@ O Spring possui algumas configurações para definir os usuários na sua camada 
 
 ## 🔒Autenticação usando Banco de Dados
 
-- Após adicionar a dependência do JPA, **cria-se a classe User** (esse classe contem atributos, como id, name, passaword, username e roles);
-- Um **repositório para interagir com a entidade User** e fazer operações crud também é implementado;
-- Uma **interface**, denominada de *UserDetailsService,* para **recuperar dados relacionados ao usuário** também é implementada em uma classe que retorna o usuário para um contexto de segurança;
-- De forma manual os usuário são colocados na aplicação através de uma classe que implementa a interface *CommandLineRunner;*
-- Os testes foram realizados dentro a ferramenta Postman
-
-![Untitled 1](https://user-images.githubusercontent.com/58925056/156933587-2c32a883-6203-4a0c-b69a-f80a0ff182a6.png)
+- Após adicionar a dependência do JPA, **cria-se a classe** `user` (esse classe contem atributos, como id, name, passaword, username e roles);
+- Um repositório, `userRepository`, para **interagir com a entidade User** e fazer operações crud também é implementado;
+- Uma interface, denominada de `UserDetailsService`*,* para **recuperar dados relacionados ao usuário** também é implementada em uma classe que retorna o usuário para um contexto de segurança;
+- De forma manual os usuário são colocados na aplicação através de uma classe, `StartApplication`, que implementa a interface *CommandLineRunner;*
 
 [Referência de autenticação com banco de dados](https://glysns.gitbook.io/springframework/spring-security/auth-database)
 
+## 🎯Testes da autenticação com banco de dados
+
+Os testes forma aplicados da seguinte forma:
+
+- A maioria das API’s utilizam *Basic Autentication*, que é habilitado da seguinte forma: `anyRequest().authenticated().and().httpBasic();` dentro da classe `WebSecurityConfig`
+- Na ferramenta Postman, definimos a URI managers e em Authorization colocamos o type em Basic Auth e passamos o username e password definidos na classe `WebSecurityConfig`.
+- A pós definir os valores dos campos espera-se o retorno de status 200 e ‘Authorized manager’ definido no controller `WelcomeController`
+
+<img src="https://user-images.githubusercontent.com/58925056/156933587-2c32a883-6203-4a0c-b69a-f80a0ff182a6.png" width=700px>
 
 #  👨🏻‍💻Autor
   <img src="https://user-images.githubusercontent.com/58925056/157934762-1b63b01a-92c4-4a5a-8cf3-1787c894c565.png" width=175px>
