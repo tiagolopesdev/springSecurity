@@ -34,7 +34,7 @@ Os testes forma aplicados da seguinte forma:
 
 <img src="https://user-images.githubusercontent.com/58925056/156933587-2c32a883-6203-4a0c-b69a-f80a0ff182a6.png" width=700px>
 
-#  👨🏻‍💻Autor
+# Autor
   <img src="https://user-images.githubusercontent.com/58925056/157934762-1b63b01a-92c4-4a5a-8cf3-1787c894c565.png" width=175px>
 
 ### 📲Meus contatos
