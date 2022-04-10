@@ -1,12 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
 .login-page {
   width: 400px;
   padding: 8% 0 0;
   margin: auto;
 }
 .form {
-    border-radius: 30px;
+  border-radius: 30px;
   position: relative;
   background: #FFFFFF;
   max-width: 400px;
