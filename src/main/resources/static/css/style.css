@@ -3,6 +3,11 @@
   padding: 8% 0 0;
   margin: auto;
 }
+#remember{
+  display: flex;
+  align-items: baseline;
+  padding-top: 20px;
+}
 .form {
   border-radius: 30px;
   position: relative;
