@@ -22,7 +22,7 @@ public class InMemorySecurityConfig {
                 .passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .withUser("tiago").password("123").roles("USER")
                 .and()
-                .withUser("geovana").password("321").roles("ADMIN");
+                .withUser("geovana").password("321").roles("ADMIN","USER");
     }
     
 }
