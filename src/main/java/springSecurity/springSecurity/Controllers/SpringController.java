@@ -20,7 +20,7 @@ public class SpringController {
         return "entrar";
     }
     
-    @RequestMapping(method = RequestMethod.GET, path = "/user")
+    @RequestMapping(method = RequestMethod.GET, path = "/")
     public String user() {
         return "user";
     }
