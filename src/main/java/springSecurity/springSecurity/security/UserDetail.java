@@ -24,6 +24,10 @@ public class UserDetail implements UserDetails {
         this.users = u;
     }
 
+    public String getName(){        
+        return this.users.getName();
+    }
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> autorities = new ArrayList<>();

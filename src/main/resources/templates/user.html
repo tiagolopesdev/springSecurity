@@ -11,7 +11,10 @@
     <body>
         <header th:replace="navBar"></header>
 
-        <div><h2 class="text-center" style="padding-top: 12%">Olá User, Home Page aqui!</h2></div>
+        <div>
+            <h2 class="text-center" style="padding-top: 12%">
+                Olá <span sec:authentication="principal.username"></span>, Home Page aqui!</h2>
+        </div>
         
     </body>
 </html>
