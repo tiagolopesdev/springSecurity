@@ -12,7 +12,7 @@
         <header th:replace="navBar"></header>
 
         <div>
-            <h2 class="text-center" style="padding-top: 12%">
+            <h2 class="text-center" style="padding-top: 12%" sec:authorize access="isAuthenticated()">
                 Olá <span sec:authentication="principal.username"></span>, Home Page aqui!</h2>
         </div>
         
