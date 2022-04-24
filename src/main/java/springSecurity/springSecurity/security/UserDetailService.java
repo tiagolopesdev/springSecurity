@@ -11,24 +11,25 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import springSecurity.springSecurity.repository.UserRepository;
-
 
 /**
  *
  * @author tiagolopes
  */
 @Service
-public class UserDetailService implements UserDetailsService{
+@Transactional
+public class UserDetailService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
-    
+
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Users user = userRepository.findByLogin(username);
-        UserDetail ud = new UserDetail(user);
-        return ud;
+    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+        Users user = userRepository.findByLogin(login);                                       
+        UserDetail detail = new UserDetail(user);
+        return detail;
     }
-    
+
 }
