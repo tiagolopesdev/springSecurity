@@ -20,26 +20,21 @@ public class UserDetail implements UserDetails {
 
     private Users users;
 
-    public UserDetail(Users u) {
-        this.users = u;
-    }
-
-    public String getName(){        
-        return this.users.getName();
+    public UserDetail(Users users) {
+        this.users = users;
     }
     
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> autorities = new ArrayList<>();
-        users.getRole().forEach(r -> {
-            GrantedAuthority authority = new SimpleGrantedAuthority("" + r);
-            autorities.add(authority);
-        });
+        this.users.getRole().forEach(r -> {
+            autorities.add(new SimpleGrantedAuthority(r.getName()));             
+        });        
         return autorities;
     }
 
     @Override
-    public String getPassword() {
+    public String getPassword() {        
         return this.users.getPassword();
     }
 
@@ -65,7 +60,7 @@ public class UserDetail implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return this.isEnabled();
+        return this.users.isAtivo();
     }
 
 }
