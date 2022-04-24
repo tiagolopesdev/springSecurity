@@ -13,16 +13,16 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
  *
  * @author tiagolopes
  */
-@Configuration
+//@Configuration
 public class InMemorySecurityConfig {
     
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception{
-        builder.inMemoryAuthentication()
-                .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .withUser("tiago").password("123").roles("USER")
-                .and()
-                .withUser("geovana").password("321").roles("ADMIN","USER");
-    }
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception{
+//        builder.inMemoryAuthentication()
+//                .passwordEncoder(NoOpPasswordEncoder.getInstance())
+//                .withUser("tiago").password("123").roles("USER")
+//                .and()
+//                .withUser("geovana").password("321").roles("ADMIN","USER");
+//    }
     
 }
