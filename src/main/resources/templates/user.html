@@ -1,7 +1,7 @@
 <html
     xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    xmlns:sec="https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5">
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -11,8 +11,8 @@
     <body>
         <header th:replace="navBar"></header>
 
-        <div>
-            <h2 class="text-center" style="padding-top: 12%" sec:authorize access="isAuthenticated()">
+        <div sec:authorize="isAuthenticated()">
+            <h2 class="text-center" style="padding-top: 12%">
                 Olá <span sec:authentication="principal.username"></span>, Home Page aqui!</h2>
         </div>
         
